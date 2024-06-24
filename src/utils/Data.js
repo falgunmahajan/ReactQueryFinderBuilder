@@ -8,3 +8,7 @@ export const attributes = [
   "trace_flags",
   "severity_text",
 ];
+
+export const operations = [
+  "", "=", "!=", "IN", "NOT_IN", "LIKE", "NOT_LIKE", "CONTAINS"
+]

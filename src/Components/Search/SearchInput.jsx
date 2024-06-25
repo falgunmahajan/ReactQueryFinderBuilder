@@ -25,6 +25,7 @@ const handleSearchResult=(e)=>{
       setSearchValue(e.target.value)
       setSearchData([...searchData, e.target.value])
       setSearchValue("")
+      ref.current.blur()
     }
   }
 }

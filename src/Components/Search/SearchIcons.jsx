@@ -6,7 +6,7 @@ const SearchIcons = () => {
     const {expand}=useContext(AppContext)
   return (
     <>
-     {expand ? <Search className="text-zinc-600 ml-auto " fontSize='small' /> : <ExpandMore className="text-zinc-600 ml-auto" fontSize='small' />}
+     {expand ? <Search className="text-zinc-400 ml-auto " fontSize='small' /> : <ExpandMore className="text-zinc-400 ml-auto" fontSize='small' />}
     </>
    
   )

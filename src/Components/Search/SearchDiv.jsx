@@ -6,7 +6,7 @@ import { AppContext } from '../ContextProvider'
 const SearchDiv = () => {
     const {searchData}=useContext(AppContext);
     return (
-        <div className={`flex ${searchData.length?"max-md:flex-wrap":"" } pl-2 py-1 border border-zinc-800  rounded-sm bg-zinc-900 `} >
+        <div className={`flex ${searchData.length?"max-md:flex-wrap":"" } pl-2 py-1 border border-zinc-800  rounded-sm bg-zinc-800 `} >
             <SearchData />
             <SearchInput />
             <SearchIcons />

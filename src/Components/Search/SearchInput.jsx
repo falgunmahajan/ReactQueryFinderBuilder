@@ -15,14 +15,22 @@ const SearchInput = () => {
     setOptions(filteredOptions)
     if (showContent === "value") {
       setSearchValue(e.target.value)
-      setSearchData([...searchData, value])
+      // setSearchData([...searchData, value])
+      // setSearchValue("")
+    }
+  }
+const handleSearchResult=(e)=>{
+  if(e.key==="Enter"){
+    if (showContent === "value") {
+      setSearchValue(e.target.value)
+      setSearchData([...searchData, e.target.value])
       setSearchValue("")
     }
   }
-
+}
   return (
 
-    <input value={searchValue} autoFocus ref={ref} type="text" placeholder={placeholder} className={`text-xs placeholder-zinc-400  text-white ${placeholder?"w-full":""}  outline-none bg-transparent` } onChange={handleSearchChange} onClick={toggleExpand} />
+    <input value={searchValue} autoFocus ref={ref} type="text" placeholder={placeholder} className={`text-xs placeholder-zinc-400  text-white ${placeholder?"w-full":""}  outline-none bg-transparent` } onChange={handleSearchChange} onClick={toggleExpand} onKeyDown={handleSearchResult} />
 
 
 
